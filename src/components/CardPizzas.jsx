@@ -2,8 +2,10 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import { CardText } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
-const CardPizzas = ({ pizza }) => {
+const CardPizzas = ({ pizza, agregarProducto }) => {
+  const navigate = useNavigate()
   return (
     <div className='p-3'>
       <Card style={{ width: '20rem' }} className='container p-2'>
@@ -32,7 +34,7 @@ const CardPizzas = ({ pizza }) => {
           <CardText className='text-center pt-4'> $ {pizza.price}
           </CardText>
           <CardText className='text-center'>
-            <Button variant='primary'>Ver Más
+            <Button onClick={() => navigate(`/pizza/${pizza.id}`)} variant='primary'>Ver Más
               <img
                 alt=''
                 src='/eyes.png'
@@ -41,7 +43,7 @@ const CardPizzas = ({ pizza }) => {
                 className='d-inline-block align-top'
               />
             </Button>
-            <Button variant='danger' className='ms-5'>Añadir
+            <Button variant='danger' onClick={() => agregarProducto(pizza)} className='ms-5'>Añadir
               <img
                 alt=''
                 src='/market.png'

@@ -25,3 +25,59 @@
 .header h4 {
   color: white;
 }
+
+.pizza {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-direction: row-reverse;
+}
+.link {
+  text-decoration: none;
+}
+
+.carrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.carrito-2 {
+  display: flex;
+  margin: 4px;
+  align-items: center;
+  flex-direction: row;
+}
+.carrito-2 p {
+  padding-left: 40px;
+  padding-top: 5px;
+}
+.cantidad {
+  display: flex;
+  align-items: baseline;
+}
+.cantidad p {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.total-2 {
+  text-align: right;
+}
+.notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

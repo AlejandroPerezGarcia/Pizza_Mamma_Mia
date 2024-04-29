@@ -5,14 +5,14 @@ import CardPizzas from '../components/CardPizzas'
 import { PizzaContext } from '../context/PizzaContext'
 
 const Home = () => {
-  const { pizzas } = useContext(PizzaContext)
+  const { pizzas, agregarProducto } = useContext(PizzaContext)
   return (
     <>
       <Header />
       <div className='container p-3'>
         <Row xs={1} md={3}>
           {pizzas.map(pizza => (
-            <CardPizzas key={pizza.id} pizza={pizza} />
+            <CardPizzas key={pizza.id} pizza={pizza} agregarProducto={agregarProducto} />
           ))}
         </Row>
       </div>
