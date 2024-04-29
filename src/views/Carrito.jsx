@@ -37,7 +37,10 @@ const Carrito = () => {
           ))
         }
       </div>
-      <h2 className='total-2'>Total : ${total} </h2>
+      <div className='total-2'>
+        <h2>Total : ${total} </h2>
+        <button className='btn btn-success'>Ir a Pagar</button>
+      </div>
       <Link to='/'>
         <button className='btn btn-primary'>Regresar</button>
       </Link>
